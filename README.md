@@ -33,18 +33,16 @@ Due to the fact that both LLaMA and Chinese-LLaMA have not released their model 
 1. Get the Chinese-LLaMA-7B original model weights
 First, you need to obtain the original model weights of Chinese-LLaMA-7B. Here are some ways to get it for reference:
 
-Manual merging: Manually merge model weights according to the merging steps provided by the [Chinese-LLaMA official document](https://github.com/ymcui/Chinese-LLaMA-Alpaca)
+- Manual merging: Manually merge model weights according to the merging steps provided by the [Chinese-LLaMA official document](https://github.com/ymcui/Chinese-LLaMA-Alpaca)
 
-Search and download: model search on [Hugging Face official website](https://huggingface.co/models?search=chinese-llama)
+- Search and download: model search on [Hugging Face official website](https://huggingface.co/models?search=chinese-llama)
 
-Move the model weight folder to the `models/base_models` directory, 
-such as `models/base_models/chinese-llama-7b-merged`
+Move the model weight folder to the `models/base_models` directory, such as `models/base_models/chinese-llama-7b-merged`
 
 2. Get legal-lora-7b model weights
 Second, download the [legal-lora-7b model weights](https://huggingface.co/entity303/legal-lora-7b/tree/main),
 
-Move the model weight folder to the `models/lora_weights` directory, 
-such as `models/lora_weights/legal-lora-7b`
+Move the model weight folder to the `models/lora_weights` directory, such as `models/lora_weights/legal-lora-7b`
 
 3. Run the merge script
 Finally, merge the original Chinese-LLaMA-7B model weights and the secondary trained legal-lora-7b weights:
@@ -69,12 +67,13 @@ NVIDIA GeForce RTX 3090
 
 # Model Evaluation
 We used ChatGPT-3 to clean the license text, and tried 8 versions of instructions and 4 versions of prompts.
+
 The accuracy of the judgment gradually increased from 0% to 39.3%, and now it has reached an accuracy of 52.8%.
 
 # Future Work
 In Version 2,we plan to do this things:
-[ ] Use different large legal models and try multiple instruction fine-tuning techniques to improve accuracy;
-[ ] Use multiple methods to build data sets, collect more data, clean and expand data sets;
+- [ ] Use different large legal models and try multiple instruction fine-tuning techniques to improve accuracy;
+- [ ] Use multiple methods to build data sets, collect more data, clean and expand data sets;
 
 # Contributors
 
