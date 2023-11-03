@@ -4,7 +4,7 @@ An assistant fine-tunes using large model instructions(LLM) to determine the com
 # Road Map
 We will try our best to improve our work. 
 There is our road map:
-2023/11/1 -- 1.0
+- [ ] 2023/11/1 -- 1.0
 
 # Quick Start
 We conducted research on various pretrained models, including Lawyer LLaMA (PKU), Legal-ChatGLM (NJU), LaWGPT (NJU), LexiLaw (Tsinghua), ChatLaw (PKU), DISC-LawLLM (FDU), and WisdomInterrogatory (ZJU). 
