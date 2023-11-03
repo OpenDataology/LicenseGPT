@@ -5,7 +5,6 @@ An assistant fine-tunes using large model instructions(LLM) to determine the com
 2023/11/1 -- 1.0
 
 # Quick Start
-
 We conducted research on various pretrained models, including Lawyer LLaMA (PKU), Legal-ChatGLM (NJU), LaWGPT (NJU), LexiLaw (Tsinghua), ChatLaw (PKU), DISC-LawLLM (FDU), and WisdomInterrogatory (ZJU). 
 Due to its simplicity and influence, we attempted initial licensing fine-tuning based on [LaWGPT](https://github.com/pengxiao-song/LaWGPT/tree/main).
 
@@ -90,8 +89,8 @@ The accuracy of the judgment gradually increased from 0% to 39.3%, and now it ha
 
 # Future Work
 In Version 2,we plan to do this things:
-- [] Use different large legal models and try multiple instruction fine-tuning techniques to improve accuracy;
-- [] Use multiple methods to build data sets, collect more data, clean and expand data sets;
+- [ ] Use different large legal models and try multiple instruction fine-tuning techniques to improve accuracy;
+- [ ] Use multiple methods to build data sets, collect more data, clean and expand data sets;
 
 # Contributor
 This project is maintained by the following authors : [Jingwen Tan](https://github.com/viviTjwan), [Jianshan Lin](https://github.com/san5167), [Zi Li](https://github.com/li-clement).
