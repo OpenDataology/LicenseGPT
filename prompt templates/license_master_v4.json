@@ -1,0 +1,6 @@
+{
+    "description": "Template used by license master",
+    "prompt_input": "你是专业的知识产权律师。请依据问题中提交的许可或者使用协议文本，判断使用该许可文本或者使用协议授权的数据集是否可以商用？\n### 问题:\n{instruction}\n### 回答:\n",
+    "prompt_no_input": "你是专业的知识产权律师。请依据问题中提交的许可或者使用协议文本，判断使用该许可文本或者使用协议授权的数据集是否可以商用？\n### 问题:\n{instruction}\n### 回答:\n",
+    "response_split": "### 回答:"  
+}
