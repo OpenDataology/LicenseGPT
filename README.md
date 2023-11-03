@@ -2,6 +2,8 @@
 An assistant fine-tunes using large model instructions(LLM) to determine the compliance and legality of licenses.
 
 # Road Map
+We will try our best to improve our work. 
+There is our road map:
 2023/11/1 -- 1.0
 
 # Quick Start
@@ -28,24 +30,28 @@ First, execute the service startup script:
 Secondly, visit http://127.0.0.1:7860
 
 3.Description of scripts
+```
 During the model merging phase, the merge.sh script will be run. 
 Among them, 
 `--base-model` is the downloaded base model path. 
 `--lora_model` is the trained lora parameter path provided by LawGPT. 
 `--output_dir` is the saved path of the merged model after merging parameters.
-
+```
+```
 During the instruction fine-tuning phase, the fintune.sh script will be run. 
 Different fine-tuned versions are recorded by setting `experiment_name`. 
 `--data_path` is the data path for instruction fine-tuning. 
 `--output_dir` is the checkpoint storage address generated after fine-tuning the experimental command named experiment_name. 
 `--prompt_template_name` is the selected prompt template version.
-
+```
+```
 In the stage of running the interactive interface, the webui.sh script will be run. 
 Among them, 
 `--base_model` is the base model path you choose to run. 
 `--lora_weights` is the path to obtain Lora parameters. The path selected before and after fine-tuning is different. 
 `--server_name` is the server address after running. 
 `--share_gradio` indicates whether to enable the share_gradio service.
+```
 
 # Model Merge
 Due to the fact that both LLaMA and Chinese-LLaMA have not released their model weights as open source, in accordance with the corresponding open-source license, LaWGPT can only provide LoRA weights and cannot distribute the complete model weights. However, you can obtain the original weights and independently reconstruct the model using the provided merging instructions.
@@ -74,11 +80,11 @@ sh scripts/merge.sh
 
 ## Model Training
 ![image](https://github.com/OpenDataology/LicenseGPT/blob/main/assets/Instruction%20Finetune%20Training.png)
-The file of our checkpoint generated after we fine-tuned it is upload to [Google Drive](https://drive.google.com/drive/folders/1URY870taz1LU-kb2MCNp3xug11_Z6RMB) :https://drive.google.com/drive/folders/1URY870taz1LU-kb2MCNp3xug11_Z6RMB.
+The file of our checkpoint generated after we fine-tuned it is upload to [Google Drive](https://drive.google.com/drive/folders/1URY870taz1LU-kb2MCNp3xug11_Z6RMB).
 
 ## Prompt template
-You can see the prompt we tried from the file  `templates`. 
-Up to now, we are using the file `templates/license_master_v4.json `.
+You can see the prompt we tried from the file  `prompt templates`. 
+Up to now, we are using the file `prompt templates/license_master_v4.json `.
 
 # Computing resources
 NVIDIA GeForce RTX 3090
@@ -88,7 +94,7 @@ We used ChatGPT to clean the license text, and tried 8 versions of instructions 
 The accuracy of the judgment gradually increased from 0% to 39.3%, and now it has reached an accuracy of 52.8%.
 
 # Future Work
-In Version 2,we plan to do this things:
+In next stage,we plan to do this things:
 - [ ] Use different large legal models and try multiple instruction fine-tuning techniques to improve accuracy;
 - [ ] Use multiple methods to build data sets, collect more data, clean and expand data sets;
 
@@ -97,7 +103,11 @@ This project is maintained by the following authors : [Jingwen Tan](https://gith
 
 # Cite
 LawGPT: https://github.com/pengxiao-song/LaWGPT/tree/main
+
 Chinese-LLaMA-Alpaca: https://github.com/ymcui/Chinese-LLaMA-Alpaca
+
 LLaMA: https://github.com/facebookresearch/llama
+
 Alpaca: https://github.com/tatsu-lab/stanford_alpaca
+
 alpaca-lora: https://github.com/tloen/alpaca-lora
