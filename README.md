@@ -93,6 +93,12 @@ NVIDIA GeForce RTX 3090
 We used ChatGPT to clean the license text, and tried 8 versions of instructions and 4 versions of prompts.
 The accuracy of the judgment gradually increased from 0% to 39.3%, and now it has reached an accuracy of 52.8%.
 
+# Case Study
+Details in CaseStudy.md
+
+To confirm the validity of our model, we collected 10 additional datasets along with licenses and invited three batches of Software IP Lawyers to test, with the first batch annotating the collected data with "Lawyer Review Result" as the groudtruth value for the test. The second batch of lawyers perform experiment A: read and understand the license content of the data set and make judgments. The third group of lawyers conducted Experiment B: Read and understand the results of the LicenseGPT on the content of the license and make a judgment. During this period, the three groups of lawyers do not communicate with each other. Record the accuracy rate of lawyers A and B in the experiment and the time consumed for judgment.
+
+
 # Future Work
 In next stage,we plan to do this things:
 - [ ] Use different large legal models and try multiple instruction fine-tuning techniques to improve accuracy;
