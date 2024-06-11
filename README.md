@@ -91,7 +91,15 @@ NVIDIA GeForce RTX 3090
 
 # Model Evaluation
 We used ChatGPT to clean the license text, and tried 8 versions of instructions and 4 versions of prompts.
-The accuracy of the judgment gradually increased from 0% to 39.3%, and now it has reached an accuracy of 52.8%.
+
+![image](https://github.com/OpenDataology/LicenseGPT/blob/main/assets/efficiency.png)
+
+The accuracy of the judgment gradually increased from 0% to 43.75%, and now it has reached an accuracy of 64.30%.
+Despite the smaller scale of LicenseGPT, its tailored fine-tuning process allowed it to outperform not only its directly related predecessor, LawGPT with manual confirmation, but also other general LLMs. 
+
+![image](https://github.com/OpenDataology/LicenseGPT/blob/main/assets/efficiency.png)
+
+The traditional way means software IP lawyers should manually invest a substantial amount of time consulting resources and legal literature, resulting in context-specific outcomes that can take anywhere from 10 minutes to an hour, with an average of 30 minutes per case. In stark contrast, the proposed LicenseGPT's inference time spans from a swift 1 millisecond to 70 seconds at the upper end, with an average of just 10 seconds. With the help of LicenseGPT, a substantial reduction translates to an average review time for software IP lawyers of 10 minutes, representing a notable efficiency gain and freeing up valuable time for legal professionals.
 
 # Case Study
 Details in CaseStudy.md
