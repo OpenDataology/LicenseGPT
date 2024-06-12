@@ -92,7 +92,7 @@ NVIDIA GeForce RTX 3090
 # Model Evaluation
 We used ChatGPT to clean the license text, and tried 8 versions of instructions and 4 versions of prompts.
 
-![image](https://github.com/OpenDataology/LicenseGPT/blob/main/assets/efficiency.png)
+![image](https://github.com/OpenDataology/LicenseGPT/blob/main/assets/model%20compare.png)
 
 The accuracy of the judgment gradually increased from 0% to 43.75%, and now it has reached an accuracy of 64.30%.
 Despite the smaller scale of LicenseGPT, its tailored fine-tuning process allowed it to outperform not only its directly related predecessor, LawGPT with manual confirmation, but also other general LLMs. 
