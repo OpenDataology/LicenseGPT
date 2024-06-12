@@ -86,6 +86,31 @@ The file of our checkpoint generated after we fine-tuned it is upload to [Google
 You can see the prompt we tried from the file  `prompt templates`. 
 Up to now, we are using the file `prompt templates/license_master_v4.json `.
 
+# Testing Fine-tuned Modelsc
+To test the fine-tuned model with a test dataset of question-answer pairs, where the question is a segment of license content and the answer is a human-annotated risk rating (high, medium, low risk), please follow these steps:
+
+
+1. install necessary libraries:
+```
+pip install transformers torch scikit-learn
+```
+2. prepate the test data as follows:
+```
+[
+  {
+    "instruction": ".......",
+    "input": ".....",
+    "output": "......"
+  },
+  ...
+]
+```
+3. run the test script
+``` 
+python test.py
+```
+This script will load the fine-tuned model and test dataset, generate answers for each question, calculate the semantic similarity between the predicted and standard answers using BERT, and finally compute the accuracy based on a predefined similarity threshold which can be modified by users.
+
 # Computing resources
 NVIDIA GeForce RTX 3090
 
@@ -100,6 +125,8 @@ Despite the smaller scale of LicenseGPT, its tailored fine-tuning process allowe
 ![image](https://github.com/OpenDataology/LicenseGPT/blob/main/assets/efficiency.png)
 
 The traditional way means software IP lawyers should manually invest a substantial amount of time consulting resources and legal literature, resulting in context-specific outcomes that can take anywhere from 10 minutes to an hour, with an average of 30 minutes per case. In stark contrast, the proposed LicenseGPT's inference time spans from a swift 1 millisecond to 70 seconds at the upper end, with an average of just 10 seconds. With the help of LicenseGPT, a substantial reduction translates to an average review time for software IP lawyers of 10 minutes, representing a notable efficiency gain and freeing up valuable time for legal professionals.
+
+
 
 # Case Study
 Details in CaseStudy.md
